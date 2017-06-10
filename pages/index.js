@@ -1,9 +1,8 @@
-import Link from "next/link"
+import Header from '../components/Header'
 
-export default () =>
+export default () => (
   <div>
-    <Link href="/about">
-      <button>Go to About Page</button>
-    </Link>
+    <Header />
     <p>Hello Next.js</p>
   </div>
+)
