@@ -10,5 +10,6 @@
         "package-lock.json": true,
         "yarn.lock": true
     },
-    "standard.enable": true
+    "prettier.semi": false,
+    "standard.enable": false
 }
