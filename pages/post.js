@@ -18,12 +18,12 @@ const Post = props =>
 Post.getInitialProps = async function(context) {
   const { id } = context.query
   const res = await fetch(
-    `https://redi-zungebot.herokuapp.com/api/user/${id}`,
+    `http://localhost:3001/users/${id}`,
     rediSchoolInit
   )
   const user = await res.json()
 
-  console.log(`Fetched user: ${user.firstName}`)
+  console.log(`Fetched user: ${JSON.stringify(user)}`)
 
   return { user }
 }

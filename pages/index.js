@@ -16,7 +16,7 @@ const Index = props =>
     <ul>
       {props.users.map(user =>
         <li key={user.username}>
-          <Link as={`/p/${user.username}`} href={`/post?id=${user.username}`}>
+          <Link as={`/p/${user.id}`} href={`/post?id=${user.id}`}>
             <a>{user.firstName} {user.lastName}</a>
           </Link>
         </li>
@@ -26,7 +26,7 @@ const Index = props =>
 
 Index.getInitialProps = async function() {
   const res = await fetch(
-    "https://redi-zungebot.herokuapp.com/api/user/all/",
+    "http://localhost:3001/users/",
     rediSchoolInit
   )
   const data = await res.json()
