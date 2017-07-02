@@ -2,11 +2,14 @@ import Layout from "../components/MyLayout.js"
 import Link from "next/link"
 import fetch from "isomorphic-unfetch"
 
+const API = 'https://api.notknot.com/users'
+
 const rediSchoolInit = {
   method: "GET",
   headers: {
-    "authorization": "REPLACE_ME_WITH_THE_REAL_AUTHORIZATION_TOKEN",
-    "Access-Control-Allow-Origin": "http://localhost:3000"
+    authorization: "REDI-school_2017?",
+    "Access-Control-Allow-Origin": "http://localhost:3000",
+    mode: "cors"
   }
 }
 
@@ -16,7 +19,7 @@ const Index = props =>
     <ul>
       {props.users.map(user =>
         <li key={user.username}>
-          <Link as={`/p/${user.id}`} href={`/post?id=${user.id}`}>
+          <Link as={`/users/${user.id}`} href={`/users?id=${user.id}`}>
             <a>{user.firstName} {user.lastName}</a>
           </Link>
         </li>
@@ -26,7 +29,7 @@ const Index = props =>
 
 Index.getInitialProps = async function() {
   const res = await fetch(
-    "http://localhost:3001/users/",
+    `${API}/`,
     rediSchoolInit
   )
   const data = await res.json()
