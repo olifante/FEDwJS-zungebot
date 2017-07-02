@@ -16,10 +16,10 @@ const rediSchoolInit = {
 const Requests = function(props) {
   return (
     <Layout>
-      <h1>Users</h1>
+      <h1>Requests</h1>
       <ul>
-        {props.users.map(user =>
-          <li key={user.username}>
+        {props.requests.map(request =>
+          <li key={request.id}>
             <Link
               as={`/requests/${request.id}`}
               href={`/requests?id=${request.id}`}
@@ -40,7 +40,7 @@ Requests.getInitialProps = async function() {
   console.log(`request data fetched. Count: ${data.length}`)
 
   return {
-    request: data
+    requests: data
   }
 }
 

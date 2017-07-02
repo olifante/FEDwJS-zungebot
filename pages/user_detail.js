@@ -23,7 +23,7 @@ const User = function(props) {
 
 User.getInitialProps = async function(context) {
   const { id } = context.query
-  const res = await fetch(`${API}/${id}`, rediSchoolInit)
+  const res = await fetch(`${API}/users/${id}`, rediSchoolInit)
   const user = await res.json()
 
   console.log(`Fetched user: ${JSON.stringify(user)}`)

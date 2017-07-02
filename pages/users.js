@@ -19,7 +19,7 @@ const Users = function(props) {
       <h1>Users</h1>
       <ul>
         {props.users.map(user =>
-          <li key={user.username}>
+          <li key={user.id}>
             <Link as={`/users/${user.id}`} href={`/users?id=${user.id}`}>
               <a>{user.firstName} {user.lastName}</a>
             </Link>
@@ -31,7 +31,7 @@ const Users = function(props) {
 }
 
 Users.getInitialProps = async function() {
-  const res = await fetch(`${API}/`, rediSchoolInit)
+  const res = await fetch(`${API}/users`, rediSchoolInit)
   const data = await res.json()
 
   console.log(`user data fetched. Count: ${data.length}`)
