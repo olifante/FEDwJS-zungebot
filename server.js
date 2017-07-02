@@ -16,6 +16,12 @@ app
       app.render(req, res, actualPage, queryParams)
     })
 
+    server.get("/requests/:id", (req, res) => {
+      const actualPage = "/request_detail"
+      const queryParams = { id: req.params.id }
+      app.render(req, res, actualPage, queryParams)
+    })
+
     server.get("*", (req, res) => {
       return handle(req, res)
     })

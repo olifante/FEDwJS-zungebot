@@ -4,17 +4,23 @@ const linkStyle = {
   marginRight: 15
 }
 
-const Header = () =>
-  <div>
-    <Link href="/">
-      <a style={linkStyle}>Home</a>
-    </Link>
-    <Link href="/users">
-      <a style={linkStyle}>Users</a>
-    </Link>
-    <Link href="/about">
-      <a style={linkStyle}>About</a>
-    </Link>
-  </div>
+const Header = function() {
+  return (
+    <div>
+      <Link href="/">
+        <a style={linkStyle}>Home</a>
+      </Link>
+      <Link href="/users">
+        <a style={linkStyle}>Users</a>
+      </Link>
+      <Link href="/requests">
+        <a style={linkStyle}>Requests</a>
+      </Link>
+      <Link href="/about">
+        <a style={linkStyle}>About</a>
+      </Link>
+    </div>
+  )
+}
 
 export default Header

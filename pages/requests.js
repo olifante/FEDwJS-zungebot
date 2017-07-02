@@ -2,7 +2,7 @@ import Layout from "../components/MyLayout.js"
 import Link from "next/link"
 import fetch from "isomorphic-unfetch"
 
-const API = "https://api.notknot.com/users"
+const API = "https://api.notknot.com"
 
 const rediSchoolInit = {
   method: "GET",
@@ -13,15 +13,18 @@ const rediSchoolInit = {
   }
 }
 
-const Users = function(props) {
+const Requests = function(props) {
   return (
     <Layout>
       <h1>Users</h1>
       <ul>
         {props.users.map(user =>
           <li key={user.username}>
-            <Link as={`/users/${user.id}`} href={`/users?id=${user.id}`}>
-              <a>{user.firstName} {user.lastName}</a>
+            <Link
+              as={`/requests/${request.id}`}
+              href={`/requests?id=${request.id}`}
+            >
+              <a>{request.subject}</a>
             </Link>
           </li>
         )}
@@ -30,15 +33,15 @@ const Users = function(props) {
   )
 }
 
-Users.getInitialProps = async function() {
-  const res = await fetch(`${API}/`, rediSchoolInit)
+Requests.getInitialProps = async function() {
+  const res = await fetch(`${API}/requests`, rediSchoolInit)
   const data = await res.json()
 
-  console.log(`user data fetched. Count: ${data.length}`)
+  console.log(`request data fetched. Count: ${data.length}`)
 
   return {
-    users: data
+    request: data
   }
 }
 
-export default Users
+export default Requests
