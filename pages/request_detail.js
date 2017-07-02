@@ -17,8 +17,8 @@ const Request = function(props) {
     <Layout>
       <h1>{props.request.subject}</h1>
       <p>Seeker: {props.request.seeker}</p>
-      <div>Date: {props.request.date}</div>
-      <div>Location: {props.request.address}</div>
+      <p>Date: {props.request.date}</p>
+      <p>Location: {props.request.location.streetAddress}</p>
     </Layout>
   )
 }
