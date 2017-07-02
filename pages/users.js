@@ -2,7 +2,7 @@ import Layout from "../components/MyLayout.js"
 import Link from "next/link"
 import fetch from "isomorphic-unfetch"
 
-const API = "https://api.notknot.com/users"
+const API = "http://localhost:3001"
 
 const rediSchoolInit = {
   method: "GET",
@@ -20,7 +20,8 @@ const Users = function(props) {
       <ul>
         {props.users.map(user =>
           <li key={user.id}>
-            <Link as={`/users/${user.id}`} href={`/users?id=${user.id}`}>
+            <Link as={`/users/${user.id}`} 
+            href={`/user_details?id=${user.id}`}>
               <a>{user.firstName} {user.lastName}</a>
             </Link>
           </li>
@@ -32,13 +33,11 @@ const Users = function(props) {
 
 Users.getInitialProps = async function() {
   const res = await fetch(`${API}/users`, rediSchoolInit)
-  const data = await res.json()
+  const users = await res.json()
 
-  console.log(`user data fetched. Count: ${data.length}`)
+  console.log(`user data fetched. Count: ${users.length}`)
 
-  return {
-    users: data
-  }
+  return { users }
 }
 
 export default Users
