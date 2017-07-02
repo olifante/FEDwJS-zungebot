@@ -2,7 +2,7 @@ import Layout from "../components/MyLayout.js"
 import Link from "next/link"
 import fetch from "isomorphic-unfetch"
 
-const API = "http://localhost:3001"
+const API = "https://api.notknot.com/"
 
 const rediSchoolInit = {
   method: "GET",
