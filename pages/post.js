@@ -4,10 +4,9 @@ import fetch from "isomorphic-unfetch"
 const rediSchoolInit = {
   method: "GET",
   headers: {
-    Authorization: "Token 123412341234"
-  },
-  mode: "cors",
-  cache: "default"
+    "authorization": "REPLACE_ME_WITH_THE_REAL_AUTHORIZATION_TOKEN",
+    "Access-Control-Allow-Origin": "http://localhost:3000"
+  }
 }
 
 const Post = props =>
