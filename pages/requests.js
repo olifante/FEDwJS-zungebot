@@ -8,7 +8,7 @@ const rediSchoolInit = {
   method: "GET",
   headers: {
     authorization: "REDI-school_2017?",
-    "Access-Control-Allow-Origin": "http://localhost:3000",
+    "access-control-allow-origin": "https://*.now.sh/about",
     mode: "cors"
   }
 }
