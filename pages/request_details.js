@@ -1,13 +1,21 @@
 import Layout from "../components/MyLayout.js"
-import get from '../services/get'
+import get from "../services/get"
 
 const Request = function(props) {
   return (
     <Layout>
-      <h1>{props.request.subject}</h1>
-      <p>Seeker: {props.request.seeker}</p>
-      <p>Date: {props.request.date}</p>
-      <p>Location: {props.request.location.streetAddress}</p>
+      <h1>
+        {props.request.subject}
+      </h1>
+      <p>
+        Seeker: {props.request.seeker}
+      </p>
+      <p>
+        Date: {props.request.date}
+      </p>
+      <p>
+        Location: {props.request.location.streetAddress}
+      </p>
     </Layout>
   )
 }

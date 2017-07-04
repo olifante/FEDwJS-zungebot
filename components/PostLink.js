@@ -1,10 +1,12 @@
 const PostLink = function(props) {
-  (
-  <li>
-    <Link href={`/post?title=${props.title}`}>
-      <a>{props.title}</a>
-    </Link>
-  </li>
+  return (
+    <li>
+      <Link href={`/post?title=${props.title}`}>
+        <a>
+          {props.title}
+        </a>
+      </Link>
+    </li>
   )
 }
 

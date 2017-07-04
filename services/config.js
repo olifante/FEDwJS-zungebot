@@ -1,4 +1,4 @@
-export const api = 'https://api.notknot.com'
+export const api = "https://api.notknot.com"
 
 export const init = {
   method: "GET",

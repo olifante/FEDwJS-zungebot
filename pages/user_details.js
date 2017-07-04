@@ -1,11 +1,15 @@
 import Layout from "../components/MyLayout.js"
-import get from '../services/get'
+import get from "../services/get"
 
 const User = function(props) {
   return (
     <Layout>
-      <h1>{props.user.username}</h1>
-      <p>{props.user.firstName}</p>
+      <h1>
+        {props.user.username}
+      </h1>
+      <p>
+        {props.user.firstName}
+      </p>
     </Layout>
   )
 }
