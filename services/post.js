@@ -9,7 +9,7 @@ export default (path, data) => fetch(`${api}${path}`, {
   headers: {
     ...init.headers,
     'Content-Type': 'application/json'
-  }
+  },
   body: data !== undefined
     ? JSON.stringify(data)
     : undefined
