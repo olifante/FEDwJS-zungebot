@@ -1,16 +1,5 @@
 import Layout from "../components/MyLayout.js"
-import fetch from "isomorphic-unfetch"
-
-const API = "https://api.notknot.com"
-
-const rediSchoolInit = {
-  method: "GET",
-  headers: {
-    authorization: "REDI-school_2017?",
-    "access-control-allow-origin": "https://*.now.sh/about",
-    mode: "cors"
-  }
-}
+import get from '../services/get'
 
 const Request = function(props) {
   return (
@@ -25,8 +14,8 @@ const Request = function(props) {
 
 Request.getInitialProps = async function(context) {
   const { id } = context.query
-  const res = await fetch(`${API}/requests/${id}`, rediSchoolInit)
-  const request = await res.json()
+  const response = await get(`/requests/${id}`)
+  const request = await response.json()
 
   console.log(`Fetched request: ${JSON.stringify(request)}`)
 

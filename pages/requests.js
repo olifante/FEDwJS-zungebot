@@ -1,17 +1,6 @@
 import Layout from "../components/MyLayout.js"
 import Link from "next/link"
-import fetch from "isomorphic-unfetch"
-
-const API = "https://api.notknot.com"
-
-const rediSchoolInit = {
-  method: "GET",
-  headers: {
-    authorization: "REDI-school_2017?",
-    "access-control-allow-origin": "https://*.now.sh/about",
-    mode: "cors"
-  }
-}
+import get from '../services/get'
 
 const Requests = function(props) {
   return (
@@ -26,13 +15,16 @@ const Requests = function(props) {
           </li>
         )}
       </ul>
+      <Link href='/request_create'>
+        <button className='btn btn-primary'>add new</button>
+      </Link>
     </Layout>
   )
 }
 
 Requests.getInitialProps = async function() {
-  const res = await fetch(`${API}/requests`, rediSchoolInit)
-  const requests = await res.json()
+  const response = await get('/requests')
+  const requests = await response.json()
 
   console.log(`request data fetched. Count: ${requests.length}`)
 
