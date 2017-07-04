@@ -3,7 +3,7 @@ import { api, init } from "./config"
 
 const method = "POST"
 
-export default (path, data) =>
+export default function(path, data) {
   fetch(`${api}${path}`, {
     ...init,
     method,
@@ -13,3 +13,4 @@ export default (path, data) =>
     },
     body: data !== undefined ? JSON.stringify(data) : undefined
   })
+}

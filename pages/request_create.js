@@ -48,11 +48,13 @@ export default Formik({
     subject: Yup.string()
   }),
 
-  mapPropsToValues: props => ({
-    seeker: props.seeker || "",
-    date: props.date || "",
-    subject: props.subject || ""
-  }),
+  mapPropsToValues: function(props) {
+    return {
+      seeker: props.seeker || "",
+      date: props.date || "",
+      subject: props.subject || ""
+    }
+  },
 
   handleSubmit: async function(payload, { props, setError, setSubmitting }) {
     try {
