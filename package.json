@@ -4,19 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.3",
+    "formik": "^0.7.0",
     "isomorphic-unfetch": "^1.0.0",
     "next": "^2.4.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-markdown": "^2.5.0"
+    "yup": "^0.21.3"
   },
   "devDependencies": {
     "standard": "^10.0.2"
