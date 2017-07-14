@@ -7,7 +7,7 @@ const Requests = function(props) {
   return (
     <div>
       <Head>
-        <title>Users</title>
+        <title>Requests</title>
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"
@@ -34,7 +34,7 @@ const Requests = function(props) {
           )}
         </ul>
         <Link href="/request_create">
-          <button className="btn btn-primary">add new</button>
+          <button className="btn btn-primary">add new request</button>
         </Link>
       </Layout>
     </div>

@@ -33,6 +33,9 @@ const Users = function(props) {
             </li>
           )}
         </ul>
+        <Link href="/user_create">
+          <button className="btn btn-primary">add new user</button>
+        </Link>
       </Layout>
     </div>
   )
