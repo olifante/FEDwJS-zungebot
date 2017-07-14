@@ -1,0 +1,9 @@
+POST https://api.notknot.com/users/ HTTP/1.1
+Authorization: REDI-school_2017?
+Content-Type: application/json
+
+{
+    "email": "tiago@example.com",
+    "firstName": "Tiago",
+    "lastName": "Henriques"
+}
