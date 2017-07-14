@@ -4,7 +4,7 @@ import { api, init } from "./config"
 const method = "POST"
 
 export default function(path, data) {
-  fetch(`${api}${path}`, {
+  return fetch(`${api}${path}`, {
     ...init,
     method,
     headers: {
