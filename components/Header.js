@@ -16,6 +16,9 @@ const Header = function() {
       <Link href="/requests">
         <a style={linkStyle}>Requests</a>
       </Link>
+      <Link href="/page_using_css_file">
+        <a style={linkStyle}>Page with CSS file</a>
+      </Link>
       <Link href="/about">
         <a style={linkStyle}>About</a>
       </Link>
