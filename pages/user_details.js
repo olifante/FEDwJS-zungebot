@@ -1,12 +1,12 @@
 import Layout from "../components/MyLayout.js"
 import get from "../services/get"
 import BootstrapHead from "../components/BootstrapHead"
+import React from "react"
 
 const User = function(props) {
   return (
     <Layout>
-      <BootstrapHead title="User details">
-      </BootstrapHead>
+      <BootstrapHead title="User details" />
       <h1>
         {props.user.username}
       </h1>

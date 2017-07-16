@@ -1,5 +1,6 @@
 import Layout from "../components/MyLayout.js"
 import Head from "next/head"
+import React from "react"
 
 const Index = function() {
   return (

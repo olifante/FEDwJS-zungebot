@@ -2,12 +2,12 @@ import Layout from "../components/MyLayout.js"
 import Link from "next/link"
 import BootstrapHead from "../components/BootstrapHead"
 import get from "../services/get"
+import React from "react"
 
 const Requests = function(props) {
   return (
     <div>
-      <BootstrapHead title="Requests">
-      </BootstrapHead>
+      <BootstrapHead title="Requests" />
       <Layout>
         <h1>Requests</h1>
         <ul>

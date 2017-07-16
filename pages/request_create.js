@@ -4,6 +4,7 @@ import post from "../services/post"
 import { Formik } from "formik"
 import Yup from "yup"
 import BootstrapHead from "../components/BootstrapHead"
+import React from "react"
 
 const Request = function({
   values,
@@ -16,8 +17,7 @@ const Request = function({
 }) {
   return (
     <Layout>
-      <BootstrapHead title="Create request">
-      </BootstrapHead>
+      <BootstrapHead title="Create request" />
       <form onSubmit={handleSubmit}>
         <h1>New request</h1>
         <p>
