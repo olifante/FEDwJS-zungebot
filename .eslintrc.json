@@ -5,20 +5,22 @@
         "es6": true,
         "node": true
     },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
+            "classes": true,
+            "defaultParams": true,
             "jsx": true
         },
+        "ecmaVersion": 8,
         "sourceType": "module"
     },
-    "extends": ["eslint:recommended"],
+    "plugins": [
+        "react"
+    ],
     "rules": {
-        "no-const-assign": "warn",
-        "no-this-before-super": "warn",
-        "no-undef": "warn",
-        "no-unreachable": "warn",
-        "no-unused-vars": "warn",
-        "constructor-super": "warn",
-        "valid-typeof": "warn"
     }
 }
