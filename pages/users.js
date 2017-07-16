@@ -2,21 +2,13 @@ import Layout from "../components/MyLayout.js"
 import Link from "next/link"
 import Head from "next/head"
 import get from "../services/get"
+import BootstrapHead from "../components/BootstrapHead"
 
 const Users = function(props) {
   return (
     <div>
-      <Head>
-        <title>Users</title>
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"
-        />
-      </Head>
+      <BootstrapHead title="Users">
+      </BootstrapHead>
       <Layout>
         <h1>Users</h1>
         <ul>

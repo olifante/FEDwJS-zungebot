@@ -3,6 +3,7 @@ import Router from "next/router"
 import post from "../services/post"
 import { Formik } from "formik"
 import Yup from "yup"
+import BootstrapHead from "../components/BootstrapHead"
 
 const Request = function({
   values,
@@ -15,6 +16,8 @@ const Request = function({
 }) {
   return (
     <Layout>
+      <BootstrapHead title="Create request">
+      </BootstrapHead>
       <form onSubmit={handleSubmit}>
         <h1>New request</h1>
         <p>

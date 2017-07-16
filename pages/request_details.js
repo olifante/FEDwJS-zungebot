@@ -1,9 +1,12 @@
 import Layout from "../components/MyLayout.js"
 import get from "../services/get"
+import BootstrapHead from "../components/BootstrapHead"
 
 const Request = function(props) {
   return (
     <Layout>
+      <BootstrapHead title="Request details">
+      </BootstrapHead>
       <h1>
         {props.request.subject}
       </h1>
