@@ -1,6 +1,5 @@
 import Layout from "../components/MyLayout.js"
 import Link from "next/link"
-import Head from "next/head"
 import get from "../services/get"
 import BootstrapHead from "../components/BootstrapHead"
 import React from "react"
