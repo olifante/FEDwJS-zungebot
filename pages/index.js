@@ -6,7 +6,7 @@ const Index = function() {
   <Layout>
       <BootstrapHead title="Home">
       </BootstrapHead>
-      <p>This is the home page</p>
+      <h1>Welcome to Zungebot</h1>
   </Layout>
   )
 }
