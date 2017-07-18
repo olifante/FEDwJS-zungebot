@@ -70,7 +70,7 @@ let TestPage = function() {
   return (
     <div>
       <BootstrapHead />
-      <Panel>
+      <Panel header="Button styles">
         <ButtonToolbar>
           {/* Standard button */}
           <Button>Default</Button>
@@ -94,7 +94,7 @@ let TestPage = function() {
           <Button bsStyle="link">Link</Button>
         </ButtonToolbar>
       </Panel>
-      <Panel>
+      <Panel header="Button sizes">
         <ButtonToolbar>
           <Button bsStyle="primary" bsSize="large">
             Large button
@@ -118,7 +118,7 @@ let TestPage = function() {
           <Button bsSize="xsmall">Extra small button</Button>
         </ButtonToolbar>
       </Panel>
-      <Panel>
+      <Panel header="Block level buttons">
         <div className="well" style={wellStyles}>
           <Button bsStyle="primary" bsSize="large" block>
             Block level button
@@ -128,7 +128,7 @@ let TestPage = function() {
           </Button>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Active buttons">
         <ButtonToolbar>
           <Button bsStyle="primary" bsSize="large" active>
             Primary button
@@ -138,13 +138,13 @@ let TestPage = function() {
           </Button>
         </ButtonToolbar>
       </Panel>
-      <Panel>
+      <Panel header="Button tags">
         <ButtonToolbar>
           <Button href="#">Link</Button>
           <Button>Button</Button>
         </ButtonToolbar>
       </Panel>
-      <Panel>
+      <Panel header="Disabled buttons">
         <ButtonToolbar>
           <Button bsStyle="primary" bsSize="large" disabled>
             Primary button
@@ -154,14 +154,14 @@ let TestPage = function() {
           </Button>
         </ButtonToolbar>
       </Panel>
-      <Panel>
+      <Panel header="Button group">
         <ButtonGroup>
           <Button>Left</Button>
           <Button>Middle</Button>
           <Button>Right</Button>
         </ButtonGroup>
       </Panel>
-      <Panel>
+      <Panel header="Button toolbar">
         <ButtonToolbar>
           <ButtonGroup>
             <Button>1</Button>
@@ -181,7 +181,7 @@ let TestPage = function() {
           </ButtonGroup>
         </ButtonToolbar>
       </Panel>
-      <Panel>
+      <Panel header="Button sizes">
         <div>
           <ButtonToolbar>
             <ButtonGroup bsSize="large">
@@ -216,7 +216,7 @@ let TestPage = function() {
           </ButtonToolbar>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Nested buttons">
         <ButtonGroup>
           <Button>1</Button>
           <Button>2</Button>
@@ -242,7 +242,7 @@ let TestPage = function() {
           <ToggleButton value={3}>Radio 3</ToggleButton>
         </ToggleButtonGroup>
       </Panel> */}
-      <Panel>
+      <Panel header="Vertical buttons">
         <ButtonGroup vertical>
           <Button>Button</Button>
           <Button>Button</Button>
@@ -262,13 +262,13 @@ let TestPage = function() {
           </DropdownButton>
         </ButtonGroup>
       </Panel>
-      <Panel>
+      <Panel header="Full width buttons">
         <ButtonGroup vertical block>
           <Button>Full width button</Button>
           <Button>Full width button</Button>
         </ButtonGroup>
       </Panel>
-      <Panel>
+      <Panel header="Justified buttons">
         <ButtonGroup justified>
           <Button href="#">Left</Button>
           <Button href="#">Middle</Button>
@@ -278,7 +278,7 @@ let TestPage = function() {
           </DropdownButton>
         </ButtonGroup>
       </Panel>
-      <Panel>
+      <Panel header="Button dropdowns">
         <div>
           <ButtonToolbar>
             <DropdownButton
@@ -333,7 +333,7 @@ let TestPage = function() {
           </ButtonToolbar>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="No caret button">
         <ButtonToolbar>
           <DropdownButton
             bsStyle="default"
@@ -349,7 +349,7 @@ let TestPage = function() {
           </DropdownButton>
         </ButtonToolbar>
       </Panel>
-      <Panel>
+      <Panel header="Button dropups">
         <div>
           <ButtonToolbar>
             <SplitButton title="Dropup" dropup id="split-button-dropup">
@@ -378,7 +378,7 @@ let TestPage = function() {
           </ButtonToolbar>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Button dropdown right">
         <SplitButton
           title="Dropdown right"
           pullRight
@@ -391,7 +391,7 @@ let TestPage = function() {
           <MenuItem eventKey="4">Separated link</MenuItem>
         </SplitButton>
       </Panel>
-      <Panel>
+      <Panel header="Custom dropdowns">
         <ButtonToolbar>
           <Dropdown id="dropdown-custom-1">
             <Dropdown.Toggle>
@@ -475,7 +475,7 @@ let TestPage = function() {
           </Tooltip>
         </div>
       </Panel> */}
-      <Panel>
+      <Panel header="Pill Navs">
         <Nav bsStyle="pills" activeKey={1} onSelect={null}>
           <NavItem eventKey={1} href="/home">
             NavItem 1 content
@@ -488,7 +488,7 @@ let TestPage = function() {
           </NavItem>
         </Nav>
       </Panel>
-      <Panel>
+      <Panel header="Tab Navs">
         <Nav bsStyle="tabs" activeKey="1" onSelect={null}>
           <NavItem eventKey="1" href="/home">
             NavItem 1 content
@@ -508,7 +508,7 @@ let TestPage = function() {
           </NavDropdown>
         </Nav>
       </Panel>
-      <Panel>
+      <Panel header="Stacked Navs">
         <Nav bsStyle="pills" stacked activeKey={1} onSelect={null}>
           <NavItem eventKey={1} href="/home">
             NavItem 1 content
@@ -521,7 +521,7 @@ let TestPage = function() {
           </NavItem>
         </Nav>
       </Panel>
-      <Panel>
+      <Panel header="Justified Navs">
         <div>
           <Nav bsStyle="tabs" justified activeKey={1} onSelect={null}>
             <NavItem eventKey={1} href="/home">
@@ -548,7 +548,7 @@ let TestPage = function() {
           </Nav>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Navbar">
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
@@ -572,7 +572,7 @@ let TestPage = function() {
           </Nav>
         </Navbar>
       </Panel>
-      <Panel>
+      <Panel header="Responsive Navbar">
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
@@ -611,7 +611,7 @@ let TestPage = function() {
           </Navbar.Collapse>
         </Navbar>
       </Panel>
-      <Panel>
+      <Panel header="Navbar Forms">
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
@@ -629,7 +629,7 @@ let TestPage = function() {
           </Navbar.Collapse>
         </Navbar>
       </Panel>
-      <Panel>
+      <Panel header="Navbar links">
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
@@ -645,7 +645,7 @@ let TestPage = function() {
           </Navbar.Collapse>
         </Navbar>
       </Panel>
-      <Panel>
+      <Panel header="Breadcrumbs">
         <Breadcrumb>
           <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
           <Breadcrumb.Item href="http://getbootstrap.com/components/#breadcrumbs">
@@ -654,7 +654,7 @@ let TestPage = function() {
           <Breadcrumb.Item active>Data</Breadcrumb.Item>
         </Breadcrumb>
       </Panel>
-      <Panel>
+      <Panel header="Tabs">
         <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
           <Tab eventKey={1} title="Tab 1">
             Tab 1 content
@@ -667,7 +667,7 @@ let TestPage = function() {
           </Tab>
         </Tabs>
       </Panel>
-      <Panel>
+      <Panel header="Tabs with Dropdown">
         <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first">
           <Row className="clearfix">
             <Col sm={12}>
@@ -696,7 +696,7 @@ let TestPage = function() {
           </Row>
         </Tab.Container>
       </Panel>
-      <Panel>
+      <Panel header="Custom Tabs">
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row className="clearfix">
             <Col sm={4}>
@@ -714,7 +714,7 @@ let TestPage = function() {
           </Row>
         </Tab.Container>
       </Panel>
-      <Panel>
+      <Panel header="Pagination">
         <div>
           <Pagination
             bsSize="large"
@@ -740,7 +740,7 @@ let TestPage = function() {
           />
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Advanced Pagination">
         <Pagination
           prev
           next
@@ -754,13 +754,13 @@ let TestPage = function() {
           onSelect={null}
         />
       </Panel>
-      <Panel>
+      <Panel header="Pagers">
         <Pager>
           <Pager.Item href="#">Previous</Pager.Item>{" "}
           <Pager.Item href="#">Next</Pager.Item>
         </Pager>
       </Panel>
-      <Panel>
+      <Panel header="Aligned Pagers">
         <Pager>
           <Pager.Item previous href="#">
             &larr; Previous Page
@@ -770,7 +770,7 @@ let TestPage = function() {
           </Pager.Item>
         </Pager>
       </Panel>
-      <Panel>
+      <Panel header="Basic Grid">
         <Grid>
           <Row className="show-grid">
             <Col xs={12} md={8}>
@@ -825,7 +825,7 @@ let TestPage = function() {
           </Row>
         </Grid>
       </Panel>
-      <Panel>
+      <Panel header="Incorrect Grid">
         <Grid>
           <Row className="show-grid">
             <Col sm={6} md={3}>
@@ -859,7 +859,7 @@ let TestPage = function() {
           </Row>
         </Grid>
       </Panel>
-      <Panel>
+      <Panel header="Clearfix Grid">
         <Grid>
           <Row className="show-grid">
             <Col sm={6} md={3}>
@@ -898,7 +898,7 @@ let TestPage = function() {
           </Row>
         </Grid>
       </Panel>
-      <Panel>
+      <Panel header="Jumbotron">
         <Jumbotron>
           <h1>Hello, world!</h1>
           <p>
@@ -910,26 +910,26 @@ let TestPage = function() {
           </p>
         </Jumbotron>
       </Panel>
-      <Panel>
+      <Panel header="PageHeader">
         <PageHeader>
           Example page header <small>Subtext for header</small>
         </PageHeader>
       </Panel>
-      <Panel>
+      <Panel header="List group">
         <ListGroup>
           <ListGroupItem>Item 1</ListGroupItem>
           <ListGroupItem>Item 2</ListGroupItem>
           <ListGroupItem>...</ListGroupItem>
         </ListGroup>
       </Panel>
-      <Panel>
+      <Panel header="Linked list group">
         <ListGroup>
           <ListGroupItem href="#link1">Link 1</ListGroupItem>
           <ListGroupItem href="#link2">Link 2</ListGroupItem>
           <ListGroupItem onClick={null}>Trigger an alert</ListGroupItem>
         </ListGroup>
       </Panel>
-      <Panel>
+      <Panel header="Styled list group">
         <ListGroup>
           <ListGroupItem href="#" active>
             Link 1
@@ -940,7 +940,7 @@ let TestPage = function() {
           </ListGroupItem>
         </ListGroup>
       </Panel>
-      <Panel>
+      <Panel header="Colored list group">
         <ListGroup>
           <ListGroupItem bsStyle="success">Success</ListGroupItem>
           <ListGroupItem bsStyle="info">Info</ListGroupItem>
@@ -948,7 +948,7 @@ let TestPage = function() {
           <ListGroupItem bsStyle="danger">Danger</ListGroupItem>
         </ListGroup>
       </Panel>
-      <Panel>
+      <Panel header="List group with header">
         <ListGroup>
           <ListGroupItem header="Heading 1">Some body text</ListGroupItem>
           <ListGroupItem header="Heading 2" href="#">
@@ -959,7 +959,7 @@ let TestPage = function() {
           </ListGroupItem>
         </ListGroup>
       </Panel>
-      <Panel>
+      <Panel header="Table">
         <Table striped bordered condensed hover>
           <thead>
             <tr>
@@ -990,7 +990,7 @@ let TestPage = function() {
           </tbody>
         </Table>
       </Panel>
-      <Panel>
+      <Panel header="Panel alternatives">
         <div>
           <Panel header="Panel Title">Panel content</Panel>
 
@@ -1026,10 +1026,10 @@ let TestPage = function() {
           Some more panel content here.
         </Panel>
       </Panel> */}
-      <Panel>
+      <Panel header="Well">
         <Well>Look I'm in a well!</Well>
       </Panel>
-      <Panel>
+      <Panel header="Form controls">
         <form>
           <Checkbox checked readOnly>
             Checkbox
@@ -1082,7 +1082,7 @@ let TestPage = function() {
           <Button type="submit">Submit</Button>
         </form>
       </Panel>
-      <Panel>
+      <Panel header="Inline forms">
         <Form inline>
           <FormGroup controlId="formInlineName">
             <ControlLabel>Name</ControlLabel>{" "}
@@ -1095,7 +1095,7 @@ let TestPage = function() {
           <Button type="submit">Send invitation</Button>
         </Form>
       </Panel>
-      <Panel>
+      <Panel header="Horizontal forms">
         <Form horizontal>
           <FormGroup controlId="formHorizontalEmail">
             <Col componentClass={ControlLabel} sm={2}>
@@ -1128,7 +1128,7 @@ let TestPage = function() {
           </FormGroup>
         </Form>
       </Panel>
-      <Panel>
+      <Panel header="Input groups">
         <form>
           <FormGroup>
             <InputGroup>
@@ -1198,7 +1198,7 @@ let TestPage = function() {
           </FormGroup>
         </form>
       </Panel>
-      <Panel>
+      <Panel header="Input sizes">
         <form>
           <FormGroup bsSize="large">
             <FormControl type="text" placeholder="Large text" />
@@ -1211,7 +1211,7 @@ let TestPage = function() {
           </FormGroup>
         </form>
       </Panel>
-      <Panel>
+      <Panel header="Form validation">
         <form>
           <FormGroup
             controlId="formValidationSuccess1"
@@ -1347,7 +1347,7 @@ let TestPage = function() {
           </FormGroup>
         </form>
       </Panel>
-      <Panel>
+      <Panel header="Shaped images">
         <Grid>
           <Row>
             <Col xs={6} md={4}>
@@ -1362,10 +1362,10 @@ let TestPage = function() {
           </Row>
         </Grid>
       </Panel>
-      <Panel>
+      <Panel header="Responsive image">
         <Image src="http://via.placeholder.com/171x180" responsive />
       </Panel>
-      <Panel>
+      <Panel header="Image thumbnails">
         <Grid>
           <Row>
             <Col xs={6} md={3}>
@@ -1392,7 +1392,7 @@ let TestPage = function() {
           </Row>
         </Grid>
       </Panel>
-      <Panel>
+      <Panel header="Divider thumbnails">
         <Grid>
           <Row>
             <Col xs={6} md={4}>
@@ -1428,7 +1428,7 @@ let TestPage = function() {
           </Row>
         </Grid>
       </Panel>
-      <Panel>
+      <Panel header="Carousel">
         <Carousel>
           <Carousel.Item>
             <img
@@ -1470,7 +1470,7 @@ let TestPage = function() {
           </Carousel.Item>
         </Carousel>
       </Panel>
-      <Panel>
+      <Panel header="Media objects">
         <div>
           <Media>
             <Media.Left>
@@ -1582,7 +1582,7 @@ let TestPage = function() {
           </Media>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Aligned Media">
         <div>
           <Media>
             <Media.Left align="top">
@@ -1664,7 +1664,7 @@ let TestPage = function() {
           </Media>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Media List">
         <div>
           <Media.List>
             <Media.ListItem>
@@ -1746,7 +1746,7 @@ let TestPage = function() {
           </Media.List>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Glyphicons">
         <div>
           <ButtonToolbar>
             <ButtonGroup>
@@ -1782,7 +1782,7 @@ let TestPage = function() {
           </ButtonToolbar>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Label sizes">
         <div>
           <h1>
             Label <Label>New</Label>
@@ -1804,7 +1804,7 @@ let TestPage = function() {
           </p>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Small labels">
         <div>
           <Label bsStyle="default">Default</Label>&nbsp;
           <Label bsStyle="primary">Primary</Label>&nbsp;
@@ -1814,19 +1814,19 @@ let TestPage = function() {
           <Label bsStyle="danger">Danger</Label>
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Alert message">
         <Alert bsStyle="warning">
           <strong>Holy guacamole!</strong> Best check yo self, you're not
           looking too good.
         </Alert>
       </Panel>
-      <Panel>
+      <Panel header="Progress bar">
         <ProgressBar now={60} />
       </Panel>
-      <Panel>
+      <Panel header="Progress bar with label">
         <ProgressBar now={60} label="60%" />
       </Panel>
-      <Panel>
+      <Panel header="Progress bar styles">
         <div>
           <ProgressBar bsStyle="success" now={40} />
           <ProgressBar bsStyle="info" now={20} />
@@ -1834,7 +1834,7 @@ let TestPage = function() {
           <ProgressBar bsStyle="danger" now={80} />
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Progress bar striped styles">
         <div>
           <ProgressBar striped bsStyle="success" now={40} />
           <ProgressBar striped bsStyle="info" now={20} />
@@ -1842,10 +1842,10 @@ let TestPage = function() {
           <ProgressBar striped bsStyle="danger" now={80} />
         </div>
       </Panel>
-      <Panel>
+      <Panel header="Progress bar animated">
         <ProgressBar active now={45} />
       </Panel>
-      <Panel>
+      <Panel header="Progress bar stacked">
         <ProgressBar>
           <ProgressBar striped bsStyle="success" now={35} key={1} />
           <ProgressBar bsStyle="warning" now={20} key={2} />
