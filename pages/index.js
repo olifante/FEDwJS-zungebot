@@ -4,10 +4,10 @@ import React from "react"
 
 const Index = function() {
   return (
-  <Layout>
+    <Layout>
       <BootstrapHead title="Home" />
       <h1>Welcome to Zungebot</h1>
-  </Layout>
+    </Layout>
   )
 }
 
