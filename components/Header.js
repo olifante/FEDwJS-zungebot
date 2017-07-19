@@ -30,7 +30,7 @@ const logoTextStyle = {
 const Header = function() {
   return (
     <div>
-      <Navbar inverse collapseOnSelect>
+      <Navbar collapseOnSelect>
         <Navbar.Header>
           <div style={logoContainerStyle}>
             <img style={logoImgStyle} src="../static/logo.png" />
