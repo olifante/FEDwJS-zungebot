@@ -11,7 +11,8 @@ import {
   Row,
   Col,
   Thumbnail,
-  PageHeader
+  PageHeader,
+  Image
 } from "react-bootstrap"
 
 const Index = function(props) {
@@ -28,72 +29,75 @@ const Index = function(props) {
           <Button bsStyle="primary">Register!</Button>
         </p>
       </Jumbotron>
-        <PageHeader>
-          Requests <small>language needs at a specific time an place</small>
-        </PageHeader>
+      <PageHeader>
+        Requests <small>language needs at a specific time an place</small>
+      </PageHeader>
 
-        <Grid>
-          <Row>
-            {props.requests.map((request, index) =>
-              <Col xs={6} md={4}>
-                <Thumbnail
-                  src={`http://lorempixel.com/200/300/city/${index}`}
-                  alt="242x200"
-                  key={request.id}
+      <Grid>
+        <Row>
+          {props.requests.map((request, index) =>
+            <Col xs={6} md={4}>
+              <Thumbnail
+                src={`http://lorempixel.com/200/300/city/${index}`}
+                alt="200x300"
+                key={request.id}
+                rounded
+              >
+                <Link
+                  as={`/requests/${request.id}`}
+                  href={`/request_details?id=${request.id}`}
                 >
-                  <Link
-                    as={`/requests/${request.id}`}
-                    href={`/request_details?id=${request.id}`}
-                  >
-                    <a>
-                      <h3>
-                        {request.subject}
-                      </h3>
-                    </a>
-                  </Link>
-                  <p>
-                    {request.description}
-                  </p>
-                  <p>
-                    <Button bsStyle="primary">Accept</Button>&nbsp;
-                    <Button bsStyle="default">Ignore</Button>
-                  </p>
-                </Thumbnail>
-              </Col>
-            )}
-          </Row>
-        </Grid>
-        <PageHeader>
-          Users <small>helpers and seekers</small>
-        </PageHeader>
+                  <a>
+                    <h3>
+                      {request.subject}
+                    </h3>
+                  </a>
+                </Link>
+                <p>
+                  {request.description}
+                </p>
+                <p>
+                  <Button bsStyle="primary">Accept</Button>&nbsp;
+                  <Button bsStyle="default">Ignore</Button>
+                </p>
+              </Thumbnail>
+            </Col>
+          )}
+        </Row>
+      </Grid>
+      <PageHeader>
+        Users <small>helpers and seekers</small>
+      </PageHeader>
 
-        <Grid>
-          <Row>
-            {props.users.map((user, index) =>
-              <Col xs={6} md={4}>
-                <Thumbnail
-                  src={`http://lorempixel.com/200/300/animals/${index}`}
-                  alt="242x200"
-                  key={user.id}
-                >
-                  <Link
-                    as={`/users/${user.id}`}
-                    href={`/user_details?id=${user.id}`}
-                  >
-                    <a>
-                      <h3>
-                        {user.firstName} {user.lastName}
-                      </h3>
-                    </a>
-                  </Link>
+      <Grid>
+        <Row>
+          {props.users.map((user, index) =>
+            <Col xs={6} md={4}>
+              <Link
+                as={`/users/${user.id}`}
+                href={`/user_details?id=${user.id}`}
+              >
+                <a>
+                  <Image
+                    src={`http://lorempixel.com/200/200/animals/${index}`}
+                    alt="200x200"
+                    width={200}
+                    height={200}
+                    key={user.id}
+                    circle
+                  />
+                  <h3>
+                    {user.firstName} {user.lastName}
+                  </h3>
                   <p>
                     {user.bio}
                   </p>
-                </Thumbnail>
-              </Col>
-            )}
-          </Row>
-        </Grid>
+                </a>
+              </Link>
+            </Col>
+          )}
+        </Row>
+      </Grid>
     </Layout>
   )
 }
