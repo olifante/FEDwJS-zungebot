@@ -17,7 +17,7 @@ const Request = function(props) {
         Date: {props.request.date}
       </p>
       <p>
-        Location: {props.request.location.streetAddress}
+        Location: {props.request.location ? props.request.location.streetAddress : ""}
       </p>
     </Layout>
   )

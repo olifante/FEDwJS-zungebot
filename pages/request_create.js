@@ -5,6 +5,16 @@ import { Formik } from "formik"
 import Yup from "yup"
 import BootstrapHead from "../components/BootstrapHead"
 import React from "react"
+import {
+  Form,
+  FormGroup,
+  FormControl,
+  ControlLabel,
+  Checkbox,
+  Button,
+  Col,
+  PageHeader
+} from "react-bootstrap"
 
 const Request = function({
   values,
@@ -18,28 +28,85 @@ const Request = function({
   return (
     <Layout>
       <BootstrapHead title="Create request" />
-      <form onSubmit={handleSubmit}>
-        <h1>New request</h1>
-        <p>
-          Subject:{" "}
-          <input
-            name="subject"
-            value={values.subject}
-            onChange={handleChange}
-          />
-        </p>
-        <p>
-          Seeker:{" "}
-          <input name="seeker" value={values.seeker} onChange={handleChange} />
-        </p>
-        <p>
-          Date:{" "}
-          <input name="date" value={values.date} onChange={handleChange} />
-        </p>
-        <button type="submit" disabled={isSubmitting}>
-          OK
-        </button>
-      </form>
+      <PageHeader>
+        Create new request <small>what, where and when</small>
+      </PageHeader>
+      <Form horizontal onSubmit={handleSubmit}>
+        <FormGroup controlId="formHorizontalEmail">
+          <Col componentClass={ControlLabel} sm={2}>
+            Seeker email
+          </Col>
+          <Col sm={10}>
+            <FormControl
+              type="email"
+              placeholder="Enter your email"
+              name="seeker"
+              value={values.seeker}
+              onChange={handleChange}
+            />
+          </Col>
+        </FormGroup>
+
+        <FormGroup>
+          <Col componentClass={ControlLabel} sm={2}>
+            Subject
+          </Col>
+          <Col sm={10}>
+            <FormControl
+              name="subject"
+              placeholder="Enter a subject"
+              value={values.subject}
+              onChange={handleChange}
+            />
+          </Col>
+        </FormGroup>
+
+        <FormGroup>
+          <Col componentClass={ControlLabel} sm={2}>
+            Date
+          </Col>
+          <Col sm={10}>
+            <FormControl
+              name="date"
+              placeholder="Enter a date and time (e.g. 2017-07-19T10:00)"
+              value={values.date}
+              onChange={handleChange}
+            />
+          </Col>
+        </FormGroup>
+
+        <FormGroup>
+          <Col smOffset={2} sm={10}>
+            <Checkbox
+              name="helper"
+              value={values.helper}
+              onChange={handleChange}
+            >
+              Helper
+            </Checkbox>
+          </Col>
+        </FormGroup>
+
+        <FormGroup>
+          <Col smOffset={2} sm={10}>
+            <Checkbox
+              name="seeker"
+              value={values.seeker}
+              onChange={handleChange}
+            >
+              Seeker
+            </Checkbox>
+          </Col>
+        </FormGroup>
+
+        <FormGroup>
+          <Col smOffset={2} sm={10}>
+            <Button type="submit" disabled={isSubmitting}>
+              Sign in
+            </Button>
+          </Col>
+        </FormGroup>
+      </Form>
     </Layout>
   )
 }
