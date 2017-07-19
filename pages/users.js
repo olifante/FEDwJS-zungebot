@@ -3,27 +3,47 @@ import Link from "next/link"
 import get from "../services/get"
 import BootstrapHead from "../components/BootstrapHead"
 import React from "react"
+import { Media, Image, PageHeader } from "react-bootstrap"
 
 const Users = function(props) {
   return (
     <div>
       <BootstrapHead title="Users" />
       <Layout>
-        <h1>Users</h1>
-        <ul>
-          {props.users.map(user =>
-            <li key={user.id}>
-              <Link
-                as={`/users/${user.id}`}
-                href={`/user_details?id=${user.id}`}
-              >
-                <a>
-                  {user.firstName} {user.lastName}
-                </a>
-              </Link>
-            </li>
+      <PageHeader>
+        Users <small>helpers and seekers</small>
+      </PageHeader>
+        <div>
+          {props.users.map((user, index) =>
+            <Media key={user.id}>
+              <Media.Left>
+                <Image
+                  src={`http://lorempixel.com/200/200/animals/${index}`}
+                  alt="200x200"
+                  width={200}
+                  height={200}
+                  key={user.id}
+                  circle
+                />
+              </Media.Left>
+              <Media.Body>
+                <Media.Heading>
+                  <Link
+                    as={`/users/${user.id}`}
+                    href={`/user_details?id=${user.id}`}
+                  >
+                    <a>
+                      {user.firstName} {user.lastName}
+                    </a>
+                  </Link>
+                </Media.Heading>
+                <p>
+                  {user.bio}
+                </p>
+              </Media.Body>
+            </Media>
           )}
-        </ul>
+        </div>
         <Link href="/user_create">
           <button className="btn btn-primary">add new user</button>
         </Link>
