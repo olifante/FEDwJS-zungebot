@@ -1,5 +1,6 @@
 import React from "react"
 import BootstrapHead from "../components/BootstrapHead"
+import Layout from "../components/MyLayout.js"
 import {
   Button,
   ButtonToolbar,
@@ -68,7 +69,7 @@ const dummySentences = [
 
 let TestPage = function() {
   return (
-    <div>
+    <Layout title="Components">
       <BootstrapHead />
       <Panel header="Button styles">
         <ButtonToolbar>
@@ -1852,7 +1853,7 @@ let TestPage = function() {
           <ProgressBar active bsStyle="danger" now={10} key={3} />
         </ProgressBar>
       </Panel>
-    </div>
+    </Layout>
   )
 }
 
