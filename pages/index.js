@@ -26,7 +26,9 @@ const Index = function(props) {
           people needing language support for specific issues.
         </p>
         <p>
-          <Button bsStyle="primary">Register!</Button>
+          <Link href="/user_create">
+            <Button bsStyle="primary">Join us!</Button>
+          </Link>
         </p>
       </Jumbotron>
       <PageHeader>
