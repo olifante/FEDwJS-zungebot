@@ -113,9 +113,9 @@ const Request = function({
 
 export default Formik({
   validationSchema: Yup.object().shape({
-    seeker: Yup.string(),
-    date: Yup.string(),
-    subject: Yup.string()
+    seeker: Yup.string().email().required(),
+    date: Yup.date().required(),
+    subject: Yup.string().required()
   }),
 
   mapPropsToValues: function(props) {

@@ -82,14 +82,14 @@ const User = function({
 
 export default Formik({
   validationSchema: Yup.object().shape({
-    username: Yup.string(),
-    firstName: Yup.string(),
-    lastName: Yup.string(),
+    username: Yup.string().required(),
+    firstName: Yup.string().required(),
+    lastName: Yup.string().required(),
     helper: Yup.string(),
     seeker: Yup.string(),
     languages: Yup.string(),
-    bio: Yup.string(),
-    email: Yup.string(),
+    bio: Yup.string().required(),
+    email: Yup.string().email().required(),
     phone: Yup.string()
   }),
 
