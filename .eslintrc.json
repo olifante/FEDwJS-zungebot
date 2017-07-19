@@ -11,8 +11,6 @@
     ],
     "parserOptions": {
         "ecmaFeatures": {
-            "classes": true,
-            "defaultParams": true,
             "jsx": true
         },
         "ecmaVersion": 8,
