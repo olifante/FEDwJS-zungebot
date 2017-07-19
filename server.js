@@ -11,13 +11,13 @@ app
     const server = express()
 
     server.get("/users/:id", (req, res) => {
-      const actualPage = "/user_detail"
+      const actualPage = "/user_details"
       const queryParams = { id: req.params.id }
       app.render(req, res, actualPage, queryParams)
     })
 
     server.get("/requests/:id", (req, res) => {
-      const actualPage = "/request_detail"
+      const actualPage = "/request_details"
       const queryParams = { id: req.params.id }
       app.render(req, res, actualPage, queryParams)
     })
