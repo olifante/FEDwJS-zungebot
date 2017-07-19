@@ -10,9 +10,9 @@ const Users = function(props) {
     <div>
       <BootstrapHead title="Users" />
       <Layout>
-      <PageHeader>
-        Users <small>helpers and seekers</small>
-      </PageHeader>
+        <PageHeader>
+          Users <small>helpers and seekers</small>
+        </PageHeader>
         <div>
           {props.users.map((user, index) =>
             <Media key={user.id}>
