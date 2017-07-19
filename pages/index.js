@@ -12,7 +12,8 @@ import {
   Col,
   Thumbnail,
   PageHeader,
-  Image
+  Image,
+  Label
 } from "react-bootstrap"
 
 const Index = function(props) {
@@ -90,8 +91,16 @@ const Index = function(props) {
                   <h3>
                     {user.firstName} {user.lastName}
                   </h3>
+                  {user.helper &&
+                    <span>
+                      <Label bsStyle="default">Helper</Label>&nbsp;
+                    </span>}
+                  {user.seeker &&
+                    <span>
+                      <Label bsStyle="primary">Seeker</Label>&nbsp;
+                    </span>}
                   <p>
-                    {user.bio.substr(0, 100) + ' (...)'}
+                    {user.bio.substr(0, 100) + " (...)"}
                   </p>
                 </a>
               </Link>

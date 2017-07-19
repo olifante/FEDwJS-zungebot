@@ -3,7 +3,7 @@ import Link from "next/link"
 import get from "../services/get"
 import BootstrapHead from "../components/BootstrapHead"
 import React from "react"
-import { Media, Image, PageHeader } from "react-bootstrap"
+import { Media, Image, PageHeader, Label } from "react-bootstrap"
 
 const Users = function(props) {
   return (
@@ -18,7 +18,7 @@ const Users = function(props) {
             <Media key={user.id}>
               <Media.Left>
                 <Image
-                  src={`http://lorempixel.com/200/200/animals/${index}`}
+                  src={`http://lorempixel.com/200/200/animals/${index % 10}`}
                   alt="200x200"
                   width={200}
                   height={200}
@@ -40,6 +40,14 @@ const Users = function(props) {
                 <p>
                   {user.bio}
                 </p>
+                {user.helper &&
+                  <span>
+                    <Label bsStyle="default">Helper</Label>&nbsp;
+                  </span>}
+                {user.seeker &&
+                  <span>
+                    <Label bsStyle="primary">Seeker</Label>&nbsp;
+                  </span>}
               </Media.Body>
             </Media>
           )}
