@@ -1,17 +1,14 @@
 import Header from "./Header"
 import React from "react"
-
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: "1px solid #DDD"
-}
+import Grid from 'react-bootstrap/lib/Grid'
 
 const Layout = function(props) {
   return (
-    <div style={layoutStyle}>
+    <div>
       <Header />
-      {props.children}
+      <Grid>
+        {props.children}
+      </Grid>
     </div>
   )
 }
