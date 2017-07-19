@@ -70,7 +70,6 @@ const Index = function(props) {
       <PageHeader>
         Users <small>helpers and seekers</small>
       </PageHeader>
-
       <Grid>
         <Row>
           {props.users.map((user, index) =>
@@ -92,7 +91,7 @@ const Index = function(props) {
                     {user.firstName} {user.lastName}
                   </h3>
                   <p>
-                    {user.bio}
+                    {user.bio.substr(0, 100) + ' (...)'}
                   </p>
                 </a>
               </Link>
