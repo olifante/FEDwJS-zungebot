@@ -1,45 +1,70 @@
 import Link from "next/link"
-import {Navbar, NavbarHeader, NavbarBrand, NavbarToggle, Nav, NavItem, NavDropdown, MenuItem, NavbarCollapse } from "react-bootstrap"
+import {
+  Navbar,
+  NavbarHeader,
+  NavbarBrand,
+  NavbarToggle,
+  Nav,
+  NavItem,
+  NavDropdown,
+  MenuItem,
+  NavbarCollapse
+} from "react-bootstrap"
+import React from "react"
 
-const linkStyle = {
-  marginRight: 15
+const logoContainerStyle = {
+  position: "relative"
 }
 
-const logoStyle = {
-  width: "40px"
+const logoImgStyle = {
+  width: "40px",
+  position: "absolute",
+  top: "5px",
+  left: "10px"
+}
+
+const logoTextStyle = {
+  marginLeft: "50px"
 }
 
 const Header = function() {
   return (
     <div>
       <Navbar inverse collapseOnSelect>
-         <Navbar.Header>
-          <div>
-           <img style={logoStyle} src="../static/logo.png" />
+        <Navbar.Header>
+          <div style={logoContainerStyle}>
+            <img style={logoImgStyle} src="../static/logo.png" />
+            <Navbar.Brand>
+              <a href="#" style={logoTextStyle}>Zungebot</a>
+            </Navbar.Brand>
           </div>
-          <div>
-             <Navbar.Brand>
-               <a href="#">Zungebot</a>
-             </Navbar.Brand>
-          </div>
-           <Navbar.Toggle />
-         </Navbar.Header>
-
-      <Navbar.Collapse>
-         <Nav pullRight>
-           <NavItem>
-             <Link href="/">
-              <a style={linkStyle}>Home</a>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav pullRight>
+            <Link href="/">
+              <NavItem eventKey={1}>
+                Home
+              </NavItem>
             </Link>
-          </NavItem>
-          <NavItem>
             <Link href="/users">
-              <a style={linkStyle}>Users</a>
+              <NavItem eventKey={2}>
+                Users
+              </NavItem>
             </Link>
-          </NavItem>
-         </Nav>
-       </Navbar.Collapse>
-   </Navbar>
+            <Link href="/requests">
+              <NavItem eventKey={3}>
+                  Requests
+              </NavItem>
+            </Link>
+            <Link href="/about">
+              <NavItem eventKey={4}>
+                About
+              </NavItem>
+            </Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
   )
 }

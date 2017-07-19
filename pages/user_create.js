@@ -4,6 +4,7 @@ import post from "../services/post"
 import { Formik } from "formik"
 import Yup from "yup"
 import BootstrapHead from "../components/BootstrapHead"
+import React from "react"
 
 const User = function({
   values,
@@ -16,8 +17,7 @@ const User = function({
 }) {
   return (
     <Layout>
-      <BootstrapHead title="Create user">
-      </BootstrapHead>
+      <BootstrapHead title="Create user" />
       <form onSubmit={handleSubmit}>
         <h1>New user</h1>
         <p>

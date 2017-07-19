@@ -1,14 +1,13 @@
 import Layout from "../components/MyLayout.js"
 import Link from "next/link"
-import Head from "next/head"
 import get from "../services/get"
 import BootstrapHead from "../components/BootstrapHead"
+import React from "react"
 
 const Users = function(props) {
   return (
     <div>
-      <BootstrapHead title="Users">
-      </BootstrapHead>
+      <BootstrapHead title="Users" />
       <Layout>
         <h1>Users</h1>
         <ul>
