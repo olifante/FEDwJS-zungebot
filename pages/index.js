@@ -49,15 +49,15 @@ const Index = function(props) {
                   href={`/request_details?id=${request.id}`}
                 >
                   <a>
-                    <h3>
+                    <h4 className="textCenter">
                       {request.subject}
-                    </h3>
+                    </h4>
                   </a>
                 </Link>
-                <p>
+                <p className="textCenter">
                   {request.description}
                 </p>
-                <p>
+                <p className="textCenter">
                   <Button bsStyle="primary">Accept</Button>&nbsp;
                   <Button bsStyle="default">Ignore</Button>
                 </p>
@@ -110,11 +110,11 @@ const Index = function(props) {
 }
 
 Index.getInitialProps = async function() {
-  const response1 = await get("/requests?_limit=10")
+  const response1 = await get("/requests?_limit=9")
   const requests = await response1.json()
   console.log(`requests fetched. Count: ${requests.length}`)
 
-  const response2 = await get("/users?_limit=10")
+  const response2 = await get("/users?_limit=9")
   const users = await response2.json()
   console.log(`users fetched. Count: ${users.length}`)
 

@@ -7,6 +7,7 @@ let BootstrapHead = function(props) {
       <title>
         {props.title}
       </title>
+      <link rel="stylesheet" href="static/main.css" />
       <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"
