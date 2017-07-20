@@ -44,7 +44,6 @@ const Index = function(props) {
                 src={`//lorempixel.com/200/300/city/${index}`}
                 alt="200x300"
                 key={request.id}
-                rounded
               >
                 <Link
                   as={`/requests/${request.id}`}
