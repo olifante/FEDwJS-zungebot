@@ -39,11 +39,10 @@ const Index = function(props) {
       <Grid>
         <Row>
           {props.requests.map((request, index) =>
-            <Col xs={6} md={4}>
+            <Col xs={6} md={4} key={request.id}>
               <Thumbnail
                 src={`//lorempixel.com/200/300/city/${index}`}
                 alt="200x300"
-                key={request.id}
               >
                 <Link
                   as={`/requests/${request.id}`}
@@ -73,7 +72,7 @@ const Index = function(props) {
       <Grid>
         <Row>
           {props.users.map((user, index) =>
-            <Col xs={6} md={4}>
+            <Col xs={6} md={4} key={user.id}>
               <Link
                 as={`/users/${user.id}`}
                 href={`/user_details?id=${user.id}`}
@@ -84,7 +83,6 @@ const Index = function(props) {
                     alt="200x200"
                     width={200}
                     height={200}
-                    key={user.id}
                     circle
                   />
                   <h3>

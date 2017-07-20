@@ -22,7 +22,6 @@ const Users = function(props) {
                   alt="200x200"
                   width={200}
                   height={200}
-                  key={user.id}
                   circle
                 />
               </Media.Left>

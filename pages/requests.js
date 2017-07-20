@@ -22,7 +22,6 @@ const Requests = function(props) {
                   alt="300x200"
                   width={300}
                   height={200}
-                  key={request.id}
                   rounded
                 />
               </Media.Left>
