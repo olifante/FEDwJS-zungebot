@@ -41,7 +41,7 @@ const Index = function(props) {
           {props.requests.map((request, index) =>
             <Col xs={6} md={4}>
               <Thumbnail
-                src={`http://lorempixel.com/200/300/city/${index}`}
+                src={`//lorempixel.com/200/300/city/${index}`}
                 alt="200x300"
                 key={request.id}
                 rounded
@@ -81,7 +81,7 @@ const Index = function(props) {
               >
                 <a>
                   <Image
-                    src={`http://lorempixel.com/200/200/animals/${index}`}
+                    src={`//lorempixel.com/200/200/animals/${index}`}
                     alt="200x200"
                     width={200}
                     height={200}

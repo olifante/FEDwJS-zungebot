@@ -18,7 +18,7 @@ const Requests = function(props) {
             <Media key={request.id}>
               <Media.Left>
                 <Image
-                  src={`http://lorempixel.com/300/200/city/${index % 10}`}
+                  src={`//lorempixel.com/300/200/city/${index % 10}`}
                   alt="300x200"
                   width={300}
                   height={200}
