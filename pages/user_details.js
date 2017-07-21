@@ -2,11 +2,19 @@ import Layout from "../components/MyLayout.js"
 import get from "../services/get"
 import BootstrapHead from "../components/BootstrapHead"
 import React from "react"
+import { Image } from "react-bootstrap"
 
 const User = function(props) {
   return (
     <Layout>
       <BootstrapHead title="User details" />
+      <Image
+                  src={`//lorempixel.com/200/200/animals/${props.user.id % 10}`}
+                  alt="200x200"
+                  width={200}
+                  height={200}
+                  circle
+                />
       <h1>
         {props.user.username}
       </h1>
