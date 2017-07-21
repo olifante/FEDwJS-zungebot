@@ -10,9 +10,15 @@ const User = function(props) {
       <h1>
         {props.user.username}
       </h1>
-      <p>
+      <h4>
         {props.user.firstName}
-      </p>
+      </h4>
+      <h4><span><em>Languages: </em></span>
+      {props.user.languages.map((language, index) =>
+        <b key={index}>{language}{props.user.languages.length-1 != index && <span>, </span> }</b>
+        )
+      }
+      </h4>
     </Layout>
   )
 }
