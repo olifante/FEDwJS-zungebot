@@ -17,7 +17,7 @@ const User = function(props) {
             {props.user.firstName} {props.user.lastName}
       </h1>
           <h2>
-            {" "}{props.user.username}{" "}
+            {props.user.username}
           </h2>
           {props.user.helper && <span>
               <Label bsStyle="default">Helper</Label>&nbsp;
